@@ -16,7 +16,7 @@ class VoiceCallPage extends StatefulWidget {
 class _VoiceCallPageState extends State<VoiceCallPage> {
   late stt.SpeechToText _speech;
   late FlutterTts _flutterTts;
-  bool _isListening = false;
+  final bool _isListening = false;
   String _text = "Start spitting mf";
   double _confidence = 1.0;
 
@@ -65,7 +65,7 @@ class _VoiceCallPageState extends State<VoiceCallPage> {
           }
         },
         listenMode: stt.ListenMode.dictation,
-        pauseFor: Duration(seconds: 5),
+        pauseFor: const Duration(seconds: 5),
         partialResults: true,
       );
     }
@@ -97,22 +97,22 @@ class _VoiceCallPageState extends State<VoiceCallPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Voice Call AI'),
+        title: const Text('Voice Call AI'),
       ),
       body: Column(
         children: <Widget>[
           Container(
-            padding: EdgeInsets.all(16),
+            padding: const EdgeInsets.all(16),
             child: Text(
               'Confidence: ${(_confidence * 100.0).toStringAsFixed(1)}%',
             ),
           ),
           Expanded(
             child: Container(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               child: Text(
                 _text,
-                style: TextStyle(fontSize: 32),
+                style: const TextStyle(fontSize: 32),
               ),
             ),
           ),
