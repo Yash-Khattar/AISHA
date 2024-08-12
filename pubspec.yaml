@@ -1,5 +1,5 @@
 name: aisha
-description: "A new Flutter package project."
+description: "This Flutter package allows you to create a seamless voice call experience with an AI agent, similar to the ChatGPT app. It uses LangChain for answering questions based on the data you provide."
 version: 0.0.1
 repository: https://github.com/Yash-Khattar/AISHA
 homepage:
@@ -16,6 +16,7 @@ dependencies:
   http: ^1.2.2
   permission_handler: ^11.3.1
   speech_to_text: ^6.6.2
+  uuid: ^4.4.2
 
 dev_dependencies:
   flutter_test:
